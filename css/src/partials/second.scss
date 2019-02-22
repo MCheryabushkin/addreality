@@ -1,0 +1,18 @@
+.main-content {
+  &__second {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .child-block {
+      width: 298px;
+      height: 198px;
+      border: 1px solid;
+      text-align: center;
+      line-height: 198px;
+    }
+  }
+}
+

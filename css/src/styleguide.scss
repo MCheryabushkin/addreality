@@ -1,0 +1,159 @@
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+}
+.content-wrap {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  @include respond-to(sm) {
+    padding: 0 20px;
+  }
+}
+h1, h2, h3, .h1, .h2, .h3 {
+  margin-top: 0;
+  margin: 0;
+  word-break: normal;
+  font-family: $mainFont;
+  font-weight: bold;
+  color: $black;
+}
+
+h1, .h1 {
+  font-size: 30px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  //color: $green-dark;
+  @include respond-to(md) {
+    font-size: 48px;
+  }
+  @include respond-to(sm) {
+    font-size: 36px;
+  }
+}
+
+h2, .h2 {
+  font-size: 30px;
+  line-height: 35px;
+}
+
+h3, .h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:visited {
+    color: $linkColor-visited;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $linkColor-hover;
+  }
+  &:focus {
+    color: $linkColor;
+  }
+  &:active {
+    color: $linkColor-hover;
+    outline: none;
+  }
+}
+
+a.link-underline {
+  border-bottom: 1px dashed $gray;
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+
+p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  font-family: $mainFont;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  li {
+    padding-bottom: 5px;
+    padding-left: 30px;
+
+  }
+}
+
+ol {
+  list-style: none;
+  counter-reset: item;
+  padding-left: 0;
+  & > li {
+    padding-bottom: 5px;
+    padding-left: 30px;
+    &:before {
+      content: counter(item) ". ";
+      counter-increment: item;
+      font-weight: bold;
+      //color: $green;
+      display: inline-block;
+      padding-right: 11px;
+      margin-left: -30px;
+    }
+  }
+
+}
+
+.main-content {
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+  flex-grow: 1;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: $text-color;
+  font-family: $mainFont;
+  font-weight: 400;
+  overflow-x: hidden;
+  line-height: 1.4;
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+.selectpicker-holder {
+
+}

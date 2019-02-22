@@ -1,0 +1,43 @@
+.main-content {
+  &__fifth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (min-width: 1000px) {
+      flex-direction: row;
+    }
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+    border: 1px solid ;
+    @media (min-width: 1000px) {
+      width: calc(100% / 3);
+    }
+
+    &--first {
+      order: 12;
+      @media (min-width: 1000px) {
+        order: 0;
+      }
+    }
+    &--second {
+      display: none;
+      @media (min-width: 1000px) {
+        display: flex;
+      }
+    }
+    &--third {
+      order: 0;
+      @media (min-width: 1000px) {
+        order: 12;
+      }
+    }
+  }
+}
